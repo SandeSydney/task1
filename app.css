@@ -59,7 +59,7 @@ body{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 3px solid #ffffff;
+    border: 2px solid #ffffff;
 }
 .profile .time{
     background-color: #1c1f4a;
@@ -72,9 +72,6 @@ body{
 .work{
     grid-area: two;
     background-color: #ff8c66;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
 }
 .work .work-details{
     background-color: #1c1f4a;
@@ -83,9 +80,6 @@ body{
 .play{
     grid-area: three;
     background-color: #56c2e6;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
 }
 .play-details{
     background-color: #1c1f4a;
@@ -94,9 +88,6 @@ body{
 .study{
     grid-area: four;
     background-color: #ff5c7c;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
 }
 .study-details{
     background-color: #1c1f4a;
@@ -105,9 +96,6 @@ body{
 .exercise{
     grid-area: five;
     background-color: #4acf81;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
 }
 .exercise-details{
     background-color: #1c1f4a;
@@ -116,9 +104,6 @@ body{
 .social{
     grid-area: six;
     background-color: #7536d3;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
 }
 .social-details{
     background-color: #1c1f4a;
@@ -127,13 +112,17 @@ body{
 .self-care{
     grid-area: seven;
     background-color: #f1c65b;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
 }
 .self-care-details{
     background-color: #1c1f4a;
     border-radius: 10px;
+}
+
+/* CSS for item containers in grid */
+.holder{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 /* CSS for the items in the grid */
@@ -144,6 +133,9 @@ body{
     height: 60%;
     padding: 15px 10px;
 }
+.padded:hover{
+    background-color: #393c69;
+}
 
 /* CSS for the items-details top row */
 .details-row{
@@ -151,8 +143,79 @@ body{
     justify-content: space-between;
 }
 
+/* CSS for the count of hours */
+.hour-count{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /* CSS for grey text in web */
 .grayed{
     color: #8a8ca2;
     font-size: 14px;
+}
+
+
+/* **********************************************************
+*               MEDIA QUERIES for different screen sizes
+************************************************************** */
+@media screen and (max-width:767px) {
+    .container{
+        height: 100%;
+        width: 100%;
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap: 15px;
+    }
+    .profile .personal-details{
+        background-color: #5847eb;
+        height: auto;
+        border-radius: 10px;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        gap: 10px;
+    }
+    .profile .time{
+        background-color: #1c1f4a;
+        border-radius: 15px 10px;    
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+    .holder{
+        height: 100px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .padded{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+    .hour-count{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+        gap: 10px;
+    }
+    .padded:hover{
+        background-color: #1c1f4a;
+    }
 }
