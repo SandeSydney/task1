@@ -1,0 +1,158 @@
+/* Clear default passing and margin */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Body CSS */
+body{
+    background-color: #1f1d36;
+    color: white;
+}
+
+
+/* ***************************
+* Container area styling
+*****************************/
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ***************************
+* Content area styling
+*****************************/
+.content{
+    display: grid;
+    grid-template-columns: repeat(4, 18vw);
+    grid-template-rows: repeat(2, 25vh);
+    grid-template-areas: 
+        "one two three four"
+        "one five six seven"
+    ;
+    gap: 20px;
+}
+
+.profile{
+    grid-area: one;
+    background-color: #1c1f4a;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+.profile .personal-details{
+    background-color: #5847eb;
+    height: 40%;
+    border-radius: 10px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.personal-details>img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+.profile .time{
+    background-color: #1c1f4a;
+    border-radius: 10px;    
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.work{
+    grid-area: two;
+    background-color: #ff8c66;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.work .work-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.play{
+    grid-area: three;
+    background-color: #56c2e6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.play-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.study{
+    grid-area: four;
+    background-color: #ff5c7c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.study-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.exercise{
+    grid-area: five;
+    background-color: #4acf81;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.exercise-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.social{
+    grid-area: six;
+    background-color: #7536d3;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.social-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.self-care{
+    grid-area: seven;
+    background-color: #f1c65b;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.self-care-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+
+/* CSS for the items in the grid */
+.padded{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    padding: 15px 10px;
+}
+
+/* CSS for the items-details top row */
+.details-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* CSS for grey text in web */
+.grayed{
+    color: #8a8ca2;
+    font-size: 14px;
+}
