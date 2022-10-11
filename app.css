@@ -28,6 +28,7 @@ body{
 *****************************/
 .content{
     display: grid;
+    width: 80%;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 25vh);
     grid-template-areas: 
@@ -130,7 +131,7 @@ body{
     flex-direction: column-reverse;
     background-size: 20px;
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: 95% 3%;
     background-blend-mode: multiply;
 }
 
