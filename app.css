@@ -28,13 +28,13 @@ body{
 *****************************/
 .content{
     display: grid;
-    grid-template-columns: repeat(4, 18vw);
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 25vh);
     grid-template-areas: 
         "one two three four"
         "one five six seven"
     ;
-    gap: 20px;
+    gap: 10px;
 }
 
 .profile{
@@ -72,6 +72,7 @@ body{
 .work{
     grid-area: two;
     background-color: #ff8c66;
+    background-image: url('./img/envelope.png');
 }
 .work .work-details{
     background-color: #1c1f4a;
@@ -80,6 +81,7 @@ body{
 .play{
     grid-area: three;
     background-color: #56c2e6;
+    background-image: url('./img/gamepad.png');
 }
 .play-details{
     background-color: #1c1f4a;
@@ -88,6 +90,7 @@ body{
 .study{
     grid-area: four;
     background-color: #ff5c7c;
+    background-image: url('./img/folder.png');
 }
 .study-details{
     background-color: #1c1f4a;
@@ -96,6 +99,7 @@ body{
 .exercise{
     grid-area: five;
     background-color: #4acf81;
+    background-image: url('./img/run.png');
 }
 .exercise-details{
     background-color: #1c1f4a;
@@ -104,6 +108,7 @@ body{
 .social{
     grid-area: six;
     background-color: #7536d3;
+    background-image: url('./img/chats.png');
 }
 .social-details{
     background-color: #1c1f4a;
@@ -123,6 +128,10 @@ body{
     border-radius: 10px;
     display: flex;
     flex-direction: column-reverse;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-blend-mode: multiply;
 }
 
 /* CSS for the items in the grid */
@@ -141,6 +150,12 @@ body{
 .details-row{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+/* details for icon */
+.details-row>img{
+    width: 30px;
 }
 
 /* CSS for the count of hours */

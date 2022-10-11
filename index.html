@@ -32,9 +32,9 @@
 
                 <!--  time  -->
                 <div class="time">
-                    <p id="daily" class="grayed">Daily</p>
+                    <p id="daily" class="grayed" onclick="whiten_daily()">Daily</p>
                     <p id="weekly">Weekly</p>
-                    <p id="monthly" class="grayed">Monthly</p>
+                    <p id="monthly" class="grayed" onclick="whiten_monthly()">Monthly</p>
                 </div>
 
             </div>
@@ -44,7 +44,7 @@
                 <div class="work-details padded">
                     <div class="details-row">
                         <p><b>Work</b></p>
-                        <img src="" alt="details icon">
+                        <img src="./img/option-icon.png" alt="details icon">
                     </div>
                     <div class="hour-count">
                         <h3>32hrs</h3>
@@ -58,7 +58,7 @@
                 <div class="play-details padded">
                     <div class="details-row">
                         <p><b>Play</b></p>
-                        <img src="" alt="details icon">
+                        <img src="./img/option-icon.png" alt="details icon">
                     </div>
                     <div class="hour-count">
                         <h3>10hrs</h3>
@@ -72,7 +72,7 @@
                 <div class="study-details padded">
                     <div class="details-row">
                         <p><b>Study</b></p>
-                        <img src="" alt="details icon">
+                        <img src="./img/option-icon.png" alt="details icon">
                     </div>
                     <div class="hour-count">
                         <h3>4hrs</h3>
@@ -86,7 +86,7 @@
                 <div class="exercise-details padded">
                     <div class="details-row">
                         <p><b>Exercise</b></p>
-                        <img src="" alt="details icon">
+                        <img src="./img/option-icon.png" alt="details icon">
                     </div>
                     <div class="hour-count">
                         <h3>4hrs</h3>
@@ -100,7 +100,7 @@
                 <div class="social-details padded">
                     <div class="details-row">
                         <p><b>Social</b></p>
-                        <img src="" alt="details icon">
+                        <img src="./img/option-icon.png" alt="details icon">
                     </div>
                     <div class="hour-count">
                         <h3>5hrs</h3>
@@ -114,7 +114,7 @@
                 <div class="self-care-details padded">
                     <div class="details-row">
                         <p><b>Self Care</b></p>
-                        <img src="" alt="details icon">
+                        <img src="./img/option-icon.png" alt="details icon">
                     </div>
                     <div class="hour-count">
                         <h3>2hrs</h3>
@@ -126,6 +126,18 @@
         </section>
 
     </div>
+
+    <!-- JavaScript for clicks and effects -->
+    <script>
+        function whiten_daily() {
+            document.getElementById('daily').style.color = 'white';
+            document.getElementById('monthly').style.color = 'grey';
+        }
+        function whiten_monthly() {
+            document.getElementById('monthly').style.color = 'white';
+            document.getElementById('daily').style.color = 'grey';
+        }
+    </script>
 
 </body>
 </html>
